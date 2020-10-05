@@ -2,32 +2,32 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+import "./Header.scss"
+
+const Header = ({ siteTitle, title }) => (
+  <header>
+    <nav class="navbar display-grid position-relative dark">
+      <Link class="current-nav-link" href="connect.html">
+        {title}
+      </Link>
+      <a id="brand" href="/">
+        <h1>{siteTitle}</h1>
+      </a>
+      <div class="menu">
+        <Link className="nav-link" to="/">
+          Home
         </Link>
-      </h1>
-    </div>
+        <Link className="nav-link" to="/connect">
+          Connect
+        </Link>
+        <Link className="nav-link" to="/features">
+          Features
+        </Link>
+        <Link className="nav-link" to="/forum">
+          Forum
+        </Link>
+      </div>
+    </nav>
   </header>
 )
 

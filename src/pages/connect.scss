@@ -1,0 +1,43 @@
+#how-to-connect {
+  padding: 8rem 0;
+
+
+  .container {
+    display: block;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 650px;
+
+    hr {
+      margin: 1rem 0 4rem 0;
+      width: 10%;
+    }
+  }
+}
+
+.connect-instructions {
+  li {
+    padding: 0.5rem;
+    box-shadow: 0 0 1px rgb(78, 78, 78);
+    border-radius: 3px;
+    line-height: 1.5;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    list-style-type: decimal;
+    list-style-position: inside;
+    display: list-item;
+  }
+}
+
+.inline-link {
+  color: rgb(255, 130, 80);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.note {
+  color: rgb(222, 45, 45);
+  margin-top: 4rem;
+}
