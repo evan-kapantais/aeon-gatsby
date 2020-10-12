@@ -23,7 +23,7 @@ const SocialButton = ({ children, target }) => {
 
 export const FacebookButton = () => {
   return (
-    <SocialButton target='https://www.facebook.com'>
+    <SocialButton target='https://www.facebook.com/Lineage-2-AEON-107537404458544'>
       <img
         src={require("../images/social/facebook-blue.png")}
         alt='Facebook Button'
@@ -34,9 +34,9 @@ export const FacebookButton = () => {
 
 export const DiscordButton = () => {
   return (
-    <SocialButton target='https://www.discordapp.com'>
+    <SocialButton target='https://discordapp.com/invite/pUUwSB'>
       <img
-        src={require("../images/social/discord-small-white.png")}
+        src={require("../images/social/discord-small-color.png")}
         alt='Discord Button'
       />
     </SocialButton>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import SEO from "../components/seo";
-import { DiscordButton, FacebookButton } from "../components/SocialButton";
 import "./index.scss";
+import Popup from "../components/Popup";
+import Modal from "../components/Modal";
+import { DiscordButton, FacebookButton } from "../components/SocialButton";
 
 const IndexPage = () => {
   useEffect(() => {
@@ -13,7 +15,7 @@ const IndexPage = () => {
     const titleHeading = document.querySelector(".title-heading");
     const subPar = document.querySelector(".header-container > p");
     const countdown = document.querySelector(".countdown-wrapper");
-    const offer = document.querySelector(".offer");
+    const icons = document.querySelector(".social-links");
 
     setTimeout(() => {
       banner.style.boxShadow = "inset 0 0 300px black";
@@ -32,8 +34,8 @@ const IndexPage = () => {
     }, 6000);
 
     setTimeout(() => {
-      offer.classList.add("offer-open");
-    }, 10000);
+      icons.style.opacity = 1;
+    }, 7000);
   };
 
   const calculateTimeLeft = () => {
@@ -65,6 +67,10 @@ const IndexPage = () => {
     <>
       <SEO title='Home' />
       <section id='banner'>
+        <div className='social-links'>
+          <DiscordButton />
+          <FacebookButton />
+        </div>
         <div className='header-container'>
           <h1 className='title-heading'>Lineage II: Aeon</h1>
           <p>x100 Classic High Five</p>
@@ -78,52 +84,7 @@ const IndexPage = () => {
             {calculateTimeLeft().seconds} seconds
           </h2>
         </div>
-        <div className='offer'>
-          <button
-            className='offer-open-button'
-            type='button'
-            onClick={() => {
-              const popup = document.querySelector(".offer");
-              popup.classList.remove("offer-close");
-              popup.classList.add("offer-open");
-            }}
-          >
-            {`<`}
-          </button>
-          <div className='offer-social-icons'>
-            <div className='social-icon-wrapper'>
-              <DiscordButton />
-            </div>
-            <div className='social-icon-wrapper'>
-              <FacebookButton />
-            </div>
-          </div>
-          <div className='offer-text'>
-            <button
-              className='close-button'
-              type='button'
-              onClick={() => {
-                const offer = document.querySelector(".offer");
-                offer.classList.remove("offer-open");
-                offer.classList.add("offer-close");
-              }}
-            >
-              x
-            </button>
-            <h2>Hey, welcome to Aeon!</h2>
-            <hr />
-            <div className='paragraphs'>
-              <p>
-                As a side note, we offer free level 11 clans with skills for
-                leaders with 10+ members.
-              </p>
-              <p>
-                Feel free to hop on to Discord and chat with us if you have any
-                questions.
-              </p>
-            </div>
-          </div>
-        </div>
+        {window.innerWidth >= 1000 ? <Popup /> : <Modal />}
       </section>
     </>
   );
