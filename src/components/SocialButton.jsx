@@ -13,7 +13,7 @@ const Button = styled.a`
   transition: box-shadow 200ms ease;
 
   > img {
-    width: 24px;
+    width: 20px;
   }
 `;
 
