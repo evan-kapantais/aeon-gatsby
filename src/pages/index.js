@@ -63,6 +63,12 @@ const IndexPage = () => {
     }, 1000);
   });
 
+  const loadPopup = () => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 1000 ? <Popup /> : <Modal />;
+    }
+  };
+
   return (
     <>
       <SEO title='Home' />
@@ -70,21 +76,25 @@ const IndexPage = () => {
         <div className='social-links'>
           <DiscordButton />
           <FacebookButton />
+          <a className='text-link' href='http://forum.l2aeon.com/'>
+            Forum
+          </a>
         </div>
         <div className='header-container'>
           <h1 className='title-heading'>Lineage II: Aeon</h1>
           <p>x100 Classic High Five</p>
         </div>
         <div className='countdown-wrapper'>
-          <p>Server goes live in</p>
+          <p>Server goes live on</p>
           <h2 className='countdown'>
-            {calculateTimeLeft().days} days, {` `}
+            {/* {calculateTimeLeft().days} days, {` `}
             {calculateTimeLeft().hours} hours, {` `}
             {calculateTimeLeft().minutes} minutes, {` `}
-            {calculateTimeLeft().seconds} seconds
+            {calculateTimeLeft().seconds} seconds */}
+            27 November 2020 - 09:00 PM
           </h2>
         </div>
-        {window.innerWidth >= 1000 ? <Popup /> : <Modal />}
+        {loadPopup()}
       </section>
     </>
   );
