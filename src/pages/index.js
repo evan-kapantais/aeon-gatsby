@@ -91,7 +91,7 @@ const IndexPage = () => {
             {calculateTimeLeft().hours} hours, {` `}
             {calculateTimeLeft().minutes} minutes, {` `}
             {calculateTimeLeft().seconds} seconds */}
-            27 November 2020 - 09:00 PM
+            27 November 2020 at 09:00 PM
           </h2>
         </div>
         {loadPopup()}
