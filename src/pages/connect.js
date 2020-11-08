@@ -9,45 +9,62 @@ const ConnectPage = () => {
         <h1 className='page-title'>How To Connect</h1>
       </header>
       <main className='connect-main'>
-        <div className='page-container'>
-          <section>
-            <h2>Instructions (Windows)</h2>
-            <ul>
-              <li>
-                Download the Lineage II High Five client{" "}
+        <div className='page-container connect-container'>
+          <ul>
+            <li>
+              <div>
+                1. Download the Lineage II High Five client{" "}
                 <a className='text-link' href='#'>
                   here
                 </a>
                 .
-              </li>
-              <li>
-                Extract the client in <code>C:\Program Files\Lineage 2</code>.
-              </li>
-              <li>
-                Download the L2 Aeon system patch{" "}
+              </div>
+            </li>
+            <li>
+              <div>
+                2. Extract the client in <code>C:\Program Files\Lineage 2</code>
+                .
+              </div>
+            </li>
+            <li>
+              <div>
+                3. Download the L2 Aeon system patch{" "}
                 <a className='text-link' href='#'>
                   here
                 </a>
                 .
-              </li>
-              <li>
-                Extract and replace <code>system</code> inside the Lineage 2
+              </div>
+            </li>
+            <li>
+              <div>
+                4. Extract and replace <code>system</code> inside the Lineage 2
                 folder (same path).
-              </li>
-              <li>
-                Go to{" "}
+              </div>
+            </li>
+            <li>
+              <div>
+                5. Go to{" "}
                 <a className='text-link' href='https://l2aeon.com/acm/'>
                   L2 Aeon's control panel
                 </a>{" "}
                 and register your account.
-              </li>
-              <li>Confirm your account.</li>
-              <li>
-                Run <code>l2.exe</code> located inside the system folder.
-              </li>
-              <li>Login to L2 Aeon.</li>
-            </ul>
-          </section>
+              </div>
+            </li>
+            <li>
+              <div>6. Confirm your account.</div>
+            </li>
+            <li>
+              <div>
+                7. Run <code>l2.exe</code> located inside the system folder.
+              </div>
+            </li>
+            <li>
+              <div>8. Login to L2 Aeon.</div>
+            </li>
+            <li>
+              <div>9. Enjoy!</div>
+            </li>
+          </ul>
         </div>
       </main>
     </Layout>

@@ -69,6 +69,7 @@ a.link-button {
 
 code {
   background: rgb(237, 237, 237);
+  color: #111;
   padding: 0.15rem 0.5rem;
   margin: 0 0.2rem;
   border-radius: 2px;
@@ -272,33 +273,43 @@ code {
 
 // Connect page
 
+.connect-container {
+  max-width: unset;
+}
+
 .connect-main {
   padding: 8rem 0;
 
-  h2 {
-    margin-bottom: 6rem;
-  }
-
   ul {
-    list-style: decimal-leading-zero;
-    list-style-position: inside;
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
   }
-
-  li::marker{
-    font-weight: 600;
-  }
-
+  
   li {
-    margin-bottom: 3.5rem;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 0;
-      height: 1px;
-      background: $paleblue;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 2rem;
+    min-height: 350px;
+    font-weight: 600;
+    background: #74cfd7
+      url('../images/l2_08.jpg') no-repeat
+      center / cover;
+    background-attachment: fixed;
+    color: #fff;
+    box-shadow: 1px 2px 2px lightgrey;
+    transition: all 200ms ease;
+  }
+  
+  .completed {
+    filter: grayscale(1);
+    transform: scale(0.9);
   }
 
   @for $i from 1 through 8 {
