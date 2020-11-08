@@ -20,9 +20,14 @@ const IndexPage = () => {
         <div className='banner-container'>
           <h1 className='title-heading'>Lineage II: Aeon</h1>
           <p>x100 Classic High Five</p>
-          <Link to='/connect' className='link-button'>
-            Play Now
-          </Link>
+          <div className='banner-buttons-wrapper'>
+            <Link to='/connect' className='link-button'>
+              Play Now
+            </Link>
+            <a href='https://www.l2aeon.com/acm/' className='link-button'>
+              Log In
+            </a>
+          </div>
         </div>
       </section>
     </Layout>

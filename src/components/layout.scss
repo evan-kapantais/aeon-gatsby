@@ -51,22 +51,6 @@ ul {
   list-style: none;
 }
 
-a.link-button {
-  background: #fff;
-  color: #333;
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  padding: 0.8rem 2rem;
-  transition: all 400ms ease;
-  
-  &:hover {
-    background: $red;
-    color: #fff;
-    letter-spacing: 2px;
-  }
-}
-
 code {
   background: rgb(237, 237, 237);
   color: #111;
@@ -75,7 +59,7 @@ code {
   border-radius: 2px;
 }
 
-// Header
+// Navbar
 
 #navbar {
   position: absolute;
@@ -152,6 +136,34 @@ code {
     font-size: 1.7rem;
     letter-spacing: 5px;
     margin-bottom: 6rem;
+  }
+}
+
+.banner-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-button {
+  display: block;
+  background: #fff;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 200px;
+  padding: 1.2rem 0;
+  transition: all 400ms ease;
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+  
+  &:hover {
+    background: $red;
+    color: #fff;
+    letter-spacing: 2px;
   }
 }
 
