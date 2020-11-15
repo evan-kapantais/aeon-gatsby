@@ -10,40 +10,50 @@ const ConnectPage = () => {
       </header>
       <main className='connect-main'>
         <div className='page-container connect-container'>
-          <ul>
+          <ul className='normal-list'>
             <li>
+              <div className='list-item-number'>1</div>
               <div>
-                1. Download the Lineage II High Five client{" "}
-                <a className='text-link' href='#'>
+                Download the Lineage II High Five client{" "}
+                <a
+                  className='text-link'
+                  href='http://www.mediafire.com/file/zp6cubhtt870l5i/Lineage_II.rar/file'
+                >
                   here
                 </a>
                 .
               </div>
             </li>
             <li>
+              <div className='list-item-number'>2</div>
               <div>
-                2. Extract the client in <code>C:\Program Files\Lineage 2</code>
-                .
+                Extract the client in <code>C:\Program Files\Lineage 2</code>.
               </div>
             </li>
             <li>
+              <div className='list-item-number'>3</div>
               <div>
-                3. Download the L2 Aeon system patch{" "}
-                <a className='text-link' href='#'>
+                Download the L2 Aeon system patch{" "}
+                <a
+                  className='text-link'
+                  href='http://www.mediafire.com/file/9wi2e1adm2kcy9g/Aeon_Patch.zip/file'
+                >
                   here
                 </a>
                 .
               </div>
             </li>
             <li>
+              <div className='list-item-number'>4</div>
               <div>
-                4. Extract and replace <code>system</code> inside the Lineage 2
+                Extract and replace <code>system</code> inside the Lineage 2
                 folder (same path).
               </div>
             </li>
             <li>
+              <div className='list-item-number'>5</div>
               <div>
-                5. Go to{" "}
+                Go to{" "}
                 <a className='text-link' href='https://l2aeon.com/acm/'>
                   L2 Aeon's control panel
                 </a>{" "}
@@ -51,18 +61,18 @@ const ConnectPage = () => {
               </div>
             </li>
             <li>
-              <div>6. Confirm your account.</div>
+              <div className='list-item-number'>6</div>
+              <div>Confirm your account.</div>
             </li>
             <li>
+              <div className='list-item-number'>7</div>
               <div>
-                7. Run <code>l2.exe</code> located inside the system folder.
+                Run <code>l2.exe</code> located inside the system folder.
               </div>
             </li>
             <li>
-              <div>8. Login to L2 Aeon.</div>
-            </li>
-            <li>
-              <div>9. Enjoy!</div>
+              <div className='list-item-number'>8</div>
+              <div>Login to L2 Aeon.</div>
             </li>
           </ul>
         </div>
