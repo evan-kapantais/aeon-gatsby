@@ -4,11 +4,7 @@ import Author from "../components/Author";
 
 const PostCard = ({ node }) => {
   return (
-    <Link
-      to={node.fields.slug}
-      key={node.frontmatter.title}
-      className='post-card'
-    >
+    <Link to={node.fields.slug} className='post-card'>
       <p className='post-card-date'>{node.frontmatter.date}</p>
       <h1 className='post-card-title'>{node.frontmatter.title}</h1>
       <div className='post-card-data'>

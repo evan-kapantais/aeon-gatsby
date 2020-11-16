@@ -14,7 +14,7 @@ const NewsPage = ({ data }) => {
       <main className='page-main'>
         <div className='page-container'>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <PostCard node={node} />
+            <PostCard key={node.frontmatter.title} node={node} />
           ))}
         </div>
       </main>
@@ -25,6 +25,7 @@ const NewsPage = ({ data }) => {
 export const postsQuery = graphql`
   {
     allMarkdownRemark {
+      totalCount
       edges {
         node {
           timeToRead
