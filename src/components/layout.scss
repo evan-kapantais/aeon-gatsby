@@ -16,6 +16,8 @@ $darkpurple: #13081c;
 $lightpurple: #d5a1ff;
 $thinpurple: #e5cdf9;
 
+$responsiveNavbarMaxWidth: 1000px;
+
 %center-items {
   display: flex;
   justify-content: center;
@@ -79,10 +81,6 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  li {
-    display: inline-block;
-  }
 }
 
 #brand-link {
@@ -105,9 +103,91 @@ code {
   }
 
   &-active {
-    background-image: linear-gradient(transparent 50%, $red 50%);
     font-weight: 600;
     color: #fff;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+// Burger
+
+.burger-button {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 1.2rem;
+  height: 2rem;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 999;
+transition: all 400ms ease;
+}
+
+.burger-close {
+  &:hover {
+    transform: rotate(90deg);
+  }
+
+  .burger-dash:first-child {
+    position: absolute;
+    top: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+  
+  .burger-dash:nth-child(2) {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  
+  .burger-dash:nth-child(3) {
+    position: absolute;
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+}
+
+.burger-dash {
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 400ms ease;
+}
+
+@media only screen and (max-width: $responsiveNavbarMaxWidth) {
+  .nav-list {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: $darkpurple;
+    transition: all 400ms ease;
+    
+    &.shown {
+      right: 0;
+    }
+
+    li {
+      margin: 0.8rem 0;
+    }
+
+    .nav-link {
+      font-size: 1.8rem;
+    }
+  }
+
+  .burger-button {
+    display: flex;
   }
 }
 
@@ -474,10 +554,6 @@ i.note {
 .footer-nav {
   margin-bottom: 2rem;
 }
-
-// News
-
-
 
 // Post card
 
